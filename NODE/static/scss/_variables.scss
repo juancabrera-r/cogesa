@@ -1,0 +1,53 @@
+
+//Font Families
+
+$footer-font-family: Roboto, Arial, comic;
+@font-face {
+  font-family: "font-dots";
+  src: url("../fonts/HIGHSPEED.TTF") format("truetype");
+}
+@font-face {
+  font-family: "codepro";
+  src: url("../fonts/SourceCodePro-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+}
+//Responsive Variables:
+$small-screen: 1400px;
+$tablet-width: 768px;
+$phone-width: $tablet-width - 1px;
+
+
+//Base Colors:
+
+$dark-grey: #272F32;
+$clear-grey: #9DBDC6;
+$white-blue: #E1E6FA;
+$clear-red: #FF3D2E;
+$white-grey: #DAEAEF;
+$dark-blue: #3E606F;
+$white-neutral: #E9F1DF;
+$blue-tago: #0C9BD3;
+$nav-blue: #337ab7;
+
+
+
+//Font Sizes:
+
+
+h1 {font-size: 1.5em};
+h2 {font-size: 1em};
+h3 {font-size: 0.5em};
+
+@include if-is-small-screen{
+
+  h2 {font-size: 0.8em};
+}
+
+@include if-is-phone {
+
+  h1 {font-size: 1em};
+  h2 {font-size: 0.75em};
+}

@@ -1,0 +1,19 @@
+
+@mixin if-is-small-screen{
+    @media (max-width: #{$small-screen}){
+    @content;
+  }
+}
+
+@mixin if-is-tablet {
+  @media (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+
+@mixin if-is-phone {
+  @media all and (max-width: #{$phone-width}){
+    @content;
+  }
+}

@@ -1,0 +1,84 @@
+//Variables:
+
+//DATOS DE CONTACTO
+$footer-background-color: transparent;
+$footer-text-color: $white-blue;
+$font-footer-text: codepro;
+$font-size-contact: 1em;
+$font-size-contact-small-screen: 0.8em;
+$font-size-contact-tablet: 0.6em;
+$font-size-contact-phone: 0.6em;
+
+//COPYRIGHT
+$background-copyright-color: black;
+$copyright-text-color: $white-blue;
+$font-copyright: roboto;
+$font-copyright-size-text: 10px;
+$copyright-botom-color: $clear-red;
+$copyright-text-color-hover: $dark-blue;
+
+.footer {
+  padding-bottom: 100px;
+}
+
+.footer-class{
+  position: absolute;
+  bottom: 0;
+  height: 150px;
+  width: 100%;
+  z-index: 100;
+  font-family: $footer-font-family;
+  background-color: $footer-background-color;
+  text-align: center;
+  color: $footer-text-color;
+};
+
+.footer-label {
+  position: absolute;
+  bottom: 0;
+  float: left;
+  width: 100%;
+  height: 20px;
+  color: $copyright-text-color;
+}
+
+.footer h2 {
+  margin-top: 1%;
+  padding: 1%;
+}
+
+.footer p {
+  padding: 0.5%;
+  font-family: $font-footer-text;
+  font-size: $font-size-contact;
+  @include if-is-small-screen{
+    font-size: $font-size-contact-small-screen;
+  }
+  @include if-is-tablet{
+    font-size: $font-size-contact-tablet;
+  }
+  @include if-is-phone{
+    font-size: $font-size-contact-phone;
+  }
+}
+
+.footer-label {
+    background-color: $background-copyright-color;
+}
+.footer-label p {
+  padding: 4px;
+  font-family: $font-copyright;
+  font-size: $font-copyright-size-text;
+}
+
+.footer-label a {
+  color: $copyright-text-color;
+}
+
+.footer-label a:hover{
+  text-decoration: none;
+  color: $copyright-text-color-hover;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: $copyright-botom-color;
+}

@@ -1,0 +1,57 @@
+//Variables
+$border-botom-color: $clear-red;
+$background-nav-color: white;
+$nav-text-color:$nav-blue;
+$nav-text-color-hover: $dark-blue;
+$nav-text-font: Roboto;
+$nav-text-size: 14px;
+
+.container {
+  width: 100%;
+}
+
+.fit {
+  background-color: $background-nav-color;
+  opacity: 0.88;
+}
+
+.header {
+    text-align: center;
+    line-height: 50px;
+    margin: 0;
+}
+
+.header-link li {
+  color: $nav-text-color;
+  display: inline;
+  text-align: center;
+  padding: 10px 15px;
+}
+
+.header-link a:-webkit-any-link {
+  font-family: $nav-text-font;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: $nav-text-size;
+}
+
+.header-link a:hover{
+  text-decoration: none;
+  color: $nav-text-color-hover;
+  border-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: $border-botom-color;
+}
+
+.header-link a:active{
+  text-decoration: none;
+}
+
+.header-link a:visited{
+  text-decoration: none;
+}
+
+.nav_img > img {
+    height: 80px;
+    width: 140px;
+}

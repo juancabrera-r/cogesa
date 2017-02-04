@@ -1,0 +1,25 @@
+{% load static %}
+<nav class="navbar navbar-default navbar-fixed-top bar fit">
+  <div class="container ">
+      <div class="navbar-header col-md-6 nav_img  hidden-xs">
+          <!--<img alt="logo" src="./static/img/dibujo.svg">-->
+      </div>
+      <div class="col-md-6">
+        <ul class="header header-link">
+            <li role="" class="">
+                <a href="{% url 'index' %}">INICIO</a>
+            </li>
+            <li role="" class="">
+                <a href="">EQUIPO</a>
+            </li>
+            <li role="" class="">
+                <a href="{% url 'services' %}">SERVICIOS</a>
+            </li>
+            <li role="" class="">
+                <a href="#">TRABAJOS</a>
+            </li>
+        </ul>
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>

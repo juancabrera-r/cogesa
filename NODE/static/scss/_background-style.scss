@@ -1,0 +1,32 @@
+@-webkit-keyframes move
+{
+    from {
+        left: -10%;
+    }
+    to {
+        left: 0%;
+    }
+}
+.rotating-item-wrapper {
+
+}
+.rotating-item {
+    display: none;
+    position: fixed;
+   width: 120vw;
+  height: 100vh;
+  filter:alpha(opacity=40);
+  -moz-opacity: 0.4;
+  opacity: 0.4;
+    top: 0;
+    left: 0;
+}
+
+
+#transicion img{
+    //left: 5%;
+    position: absolute;
+    transition-timing-function: linear;
+    -webkit-animation: move 15s;
+    animation: move 15s;
+}

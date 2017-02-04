@@ -1,0 +1,172 @@
+//Variables
+//NODE variables
+$font-NODE: codepro;
+$font-size-NODE: 12em;
+$font-size-NODE-small-screen: 10em;
+$font-size-NODE-tablet: 8em;
+$font-size-NODE-phone: 6em;
+$font-color-NODE: white;
+//Servicios
+$font-service-color: white;
+$font-hidden-text-color: white;
+$font-size-service: 1.2em;
+$font-size-service-small-screen: 1em;
+$font-size-service-tablet: 1em;
+$font-size-service-phone: 0.4em;
+
+.title-style {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.title-style p {
+  font-family: $font-NODE;
+  font-size: $font-size-NODE;
+  @include if-is-small-screen{
+    font-size: $font-size-NODE-small-screen;
+  }
+  @include if-is-tablet{
+    font-size: $font-size-NODE-tablet;
+  }
+  @include if-is-phone{
+    font-size: $font-size-NODE-phone;
+  }
+  color: $font-color-NODE;
+  filter:alpha(opacity=80);
+  -moz-opacity: 0.80;
+  opacity: 0.80;
+}
+
+.row-service {
+    position: fixed;
+    top: 50%;
+  padding: 0;
+  margin: 0;
+}
+
+.service a {
+  text-align: center;
+  color: $font-service-color;
+  font-size: $font-size-service;
+    @include if-is-small-screen{
+    font-size: $font-size-service-small-screen;
+  }
+  @include if-is-tablet{
+    font-size: $font-size-service-tablet;
+  }
+    @include if-is-phone{
+    font-size: $font-size-service-phone;
+  }
+}
+
+.service li {
+  display: inline;
+  text-align: center;
+  padding: 10px 15px;
+  background-color: transparent;
+}
+
+.service a:-webkit-any-link {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.service a:hover{
+  text-decoration: none;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: $border-botom-color;
+
+}
+a:hover .extra-text1 {
+  display: inline;
+}
+a:hover .extra-text2 {
+  display: inline;
+}
+a:hover .extra-text3 {
+  display: inline;
+}
+a:hover .extra-text4 {
+  display: inline;
+}
+a:hover .extra-text5 {
+  display: inline;
+}
+a:hover .extra-text6 {
+  display: inline;
+}
+
+.service a:active{
+  text-decoration: none;
+}
+
+.service a:visited{
+  text-decoration: none;
+}
+
+.extra-text1 {
+    color: $font-hidden-text-color;
+    display: none;
+    text-transform: uppercase;
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.extra-text2 {
+    color: $font-hidden-text-color;
+    display: none;
+    text-transform: uppercase;
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.extra-text3 {
+    color: $font-hidden-text-color;
+    display: none;
+    text-transform: uppercase;
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.extra-text4 {
+    color: $font-hidden-text-color;
+    display: none;
+    text-transform: uppercase;
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.extra-text5 {
+    color: $font-hidden-text-color;
+    display: none;
+    text-transform: uppercase;
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.extra-text6 {
+    color: $font-hidden-text-color;
+    display: none;
+    text-transform: uppercase;
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+

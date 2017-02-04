@@ -1,0 +1,24 @@
+$icon_color: $clear-red;
+
+.carousel {
+  display: inline-flex;
+  height: 360px;
+  width: 100%;
+  margin: auto;
+  background: transparent;
+}
+
+.carousel-control {
+  background-color: transparent;
+  margin-left: 15%;
+  margin-right: 15%;
+  width: 0;
+  color: $icon_color;
+  opacity: 0.3;
+  filter: alpha(opacity=30)/* For IE8 and earlier */
+}
+
+
+.item img {
+  margin: auto;
+}
