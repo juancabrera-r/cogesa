@@ -9,10 +9,13 @@ $font-color-NODE: white;
 //Servicios
 $font-service-color: white;
 $font-hidden-text-color: white;
+$font-service-color-focus: $clear-grey;
+$service-font-family: roboto;
 $font-size-service: 1.2em;
 $font-size-service-small-screen: 1em;
 $font-size-service-tablet: 1em;
 $font-size-service-phone: 0.4em;
+$font-service-hidden: roboto;
 
 .title-style {
     position: fixed;
@@ -20,6 +23,25 @@ $font-size-service-phone: 0.4em;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+.container-service {
+  width: 100%;
+}
+
+.header {
+  text-align: center;
+      padding-top: 12px;
+    padding-bottom: 10px;
+    line-height: 50px;
+    margin: 0;
+    background-color: transparent;
+}
+.header-link li {
+  color: #337ab7;
+  display: inline;
+  text-align: center;
+  padding: 10px 15px;
+  background-color: transparent;
 }
 
 .title-style p {
@@ -35,9 +57,9 @@ $font-size-service-phone: 0.4em;
     font-size: $font-size-NODE-phone;
   }
   color: $font-color-NODE;
-  filter:alpha(opacity=80);
-  -moz-opacity: 0.80;
-  opacity: 0.80;
+  filter:alpha(opacity=60);
+  -moz-opacity: 0.60;
+  opacity: 0.60;
 }
 
 .row-service {
@@ -47,8 +69,11 @@ $font-size-service-phone: 0.4em;
   margin: 0;
 }
 
+
 .service a {
-  text-align: center;
+  font-family: $service-font-family;
+  cursor:pointer;
+  //text-align: center;
   color: $font-service-color;
   font-size: $font-size-service;
     @include if-is-small-screen{
@@ -74,13 +99,28 @@ $font-size-service-phone: 0.4em;
   text-transform: uppercase;
 }
 
-.service a:hover{
+.service a:hover, a:focus {
   text-decoration: none;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: $border-botom-color;
-
+  font-weight: bold;
+  //color: $font-service-color-focus;
+  //border-bottom-style: solid;
+  //border-bottom-width: 1px;
+  //border-bottom-color: $border-botom-color;
 }
+
+.extra-text1, .extra-text2, .extra-text3, .extra-text4, .extra-text5, .extra-text6 {
+  font-family: $font-service-hidden;
+  color: $font-hidden-text-color;
+  display: none;
+  //background-color: rgba(250,250,250,0.05);
+  text-transform: uppercase;
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 a:hover .extra-text1 {
   display: inline;
 }
@@ -109,64 +149,22 @@ a:hover .extra-text6 {
 }
 
 .extra-text1 {
-    color: $font-hidden-text-color;
-    display: none;
-    text-transform: uppercase;
-    position: fixed;
-    top: 60%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+  display: none;
 }
 .extra-text2 {
-    color: $font-hidden-text-color;
     display: none;
-    text-transform: uppercase;
-    position: fixed;
-    top: 60%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
 }
 .extra-text3 {
-    color: $font-hidden-text-color;
     display: none;
-    text-transform: uppercase;
-    position: fixed;
-    top: 60%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
 }
 .extra-text4 {
-    color: $font-hidden-text-color;
     display: none;
-    text-transform: uppercase;
-    position: fixed;
-    top: 60%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
 }
 .extra-text5 {
-    color: $font-hidden-text-color;
     display: none;
-    text-transform: uppercase;
-    position: fixed;
-    top: 60%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
 }
 .extra-text6 {
-    color: $font-hidden-text-color;
-    display: none;
-    text-transform: uppercase;
-    position: fixed;
-    top: 60%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+   display: none;
 }
 
 

@@ -1,3 +1,6 @@
+body {
+  background-color: #ECF0F1;
+}
 .tableStyle {
   position: fixed;
   height: 80vh;
@@ -5,6 +8,7 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+
 }
 
 .tableStyle img {
@@ -18,10 +22,14 @@
 
 .container {
   position: relative;
-  width: 80%;
+  width: 250px;
   height: 80%;
+  text-align: center;
 }
 
+.container h1 {
+  margin-top: 50%;
+}
 
 
 .overlay {

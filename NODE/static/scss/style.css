@@ -55,6 +55,9 @@ table {
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/Roboto-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: "service-font";
+  src: url("../fonts/Raleway-ExtraLight.ttf") format("truetype"); }
 h1 {
   font-size: 1.5em; }
 
@@ -101,47 +104,78 @@ h3 {
   max-width: 90%;
   height: auto; }
 
-.container {
-  width: 100%; }
+.menu-button-white {
+  position: fixed;
+  padding-left: 40px;
+  padding-top: 20px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer; }
 
-.fit {
-  background-color: white;
-  opacity: 0.88; }
+.menu-button-black {
+  position: fixed;
+  padding-left: 40px;
+  padding-top: 20px;
+  font-size: 40px;
+  color: black;
+  cursor: pointer; }
 
-.header {
-  text-align: center;
-  line-height: 50px;
-  margin: 0; }
+.sidenav {
+  height: 100%;
+  /* 100% Full-height */
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111;
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 60px;
+  /* Place content 60px from the top */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */ }
 
-.header-link li {
-  color: #337ab7;
-  display: inline;
-  text-align: center;
-  padding: 10px 15px; }
-
-.header-link a:-webkit-any-link {
-  font-family: Roboto;
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
   text-decoration: none;
-  text-transform: uppercase;
-  font-size: 14px; }
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s; }
 
-.header-link a:hover {
-  text-decoration: none;
-  color: #3E606F;
-  border-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: #FF3D2E; }
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus {
+  color: #f1f1f1; }
 
-.header-link a:active {
-  text-decoration: none; }
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px; }
 
-.header-link a:visited {
-  text-decoration: none; }
+.closebtn a:hover {
+  font-size: 50px; }
 
-.nav_img > img {
-  height: 80px;
-  width: 140px; }
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px; }
 
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px; }
+
+  .sidenav a {
+    font-size: 18px; } }
 .footer {
   padding-bottom: 100px; }
 
@@ -151,10 +185,9 @@ h3 {
   height: 150px;
   width: 100%;
   z-index: 100;
-  font-family: Roboto, Arial, comic;
   background-color: transparent;
   text-align: center;
-  color: #E1E6FA; }
+  color: #FFF3E3; }
 
 .footer-label {
   position: absolute;
@@ -162,15 +195,18 @@ h3 {
   float: left;
   width: 100%;
   height: 20px;
-  color: #E1E6FA; }
+  color: #FFF3E3; }
 
 .footer h2 {
   margin-top: 1%;
   padding: 1%; }
 
 .footer p {
+  filter: alpha(opacity=60);
+  -moz-opacity: 0.60;
+  opacity: 0.60;
   padding: 0.5%;
-  font-family: codepro;
+  font-family: arial;
   font-size: 1em; }
   @media (max-width: 1400px) {
     .footer p {
@@ -183,7 +219,7 @@ h3 {
       font-size: 0.6em; } }
 
 .footer-label {
-  background-color: black; }
+  background-color: rgba(0, 0, 0, 0.1); }
 
 .footer-label p {
   padding: 4px;
@@ -191,14 +227,11 @@ h3 {
   font-size: 10px; }
 
 .footer-label a {
-  color: #E1E6FA; }
+  color: #FFF3E3; }
 
 .footer-label a:hover {
   text-decoration: none;
-  color: #3E606F;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: #FF3D2E; }
+  font-weight: bold; }
 
 .carousel {
   display: inline-flex;
@@ -229,9 +262,9 @@ h3 {
   position: fixed;
   width: 120vw;
   height: 100vh;
-  filter: alpha(opacity=30);
-  -moz-opacity: 0.3;
-  opacity: 0.3;
+  filter: alpha(opacity=70);
+  -moz-opacity: 0.70;
+  opacity: 0.70;
   top: 0;
   left: 0; }
 
@@ -248,13 +281,31 @@ h3 {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
 
+.container-service {
+  width: 100%; }
+
+.header {
+  text-align: center;
+  padding-top: 12px;
+  padding-bottom: 10px;
+  line-height: 50px;
+  margin: 0;
+  background-color: transparent; }
+
+.header-link li {
+  color: #337ab7;
+  display: inline;
+  text-align: center;
+  padding: 10px 15px;
+  background-color: transparent; }
+
 .title-style p {
   font-family: codepro;
   font-size: 12em;
   color: white;
-  filter: alpha(opacity=80);
-  -moz-opacity: 0.80;
-  opacity: 0.80; }
+  filter: alpha(opacity=60);
+  -moz-opacity: 0.60;
+  opacity: 0.60; }
   @media (max-width: 1400px) {
     .title-style p {
       font-size: 10em; } }
@@ -272,7 +323,8 @@ h3 {
   margin: 0; }
 
 .service a {
-  text-align: center;
+  font-family: roboto;
+  cursor: pointer;
   color: white;
   font-size: 1.2em; }
   @media (max-width: 1400px) {
@@ -295,11 +347,20 @@ h3 {
   text-decoration: none;
   text-transform: uppercase; }
 
-.service a:hover {
+.service a:hover, a:focus {
   text-decoration: none;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: #FF3D2E; }
+  font-weight: bold; }
+
+.extra-text1, .extra-text2, .extra-text3, .extra-text4, .extra-text5, .extra-text6 {
+  font-family: roboto;
+  color: white;
+  display: none;
+  text-transform: uppercase;
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
 
 a:hover .extra-text1 {
   display: inline; }
@@ -326,64 +387,25 @@ a:hover .extra-text6 {
   text-decoration: none; }
 
 .extra-text1 {
-  color: white;
-  display: none;
-  text-transform: uppercase;
-  position: fixed;
-  top: 60%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
+  display: none; }
 
 .extra-text2 {
-  color: white;
-  display: none;
-  text-transform: uppercase;
-  position: fixed;
-  top: 60%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
+  display: none; }
 
 .extra-text3 {
-  color: white;
-  display: none;
-  text-transform: uppercase;
-  position: fixed;
-  top: 60%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
+  display: none; }
 
 .extra-text4 {
-  color: white;
-  display: none;
-  text-transform: uppercase;
-  position: fixed;
-  top: 60%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
+  display: none; }
 
 .extra-text5 {
-  color: white;
-  display: none;
-  text-transform: uppercase;
-  position: fixed;
-  top: 60%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
+  display: none; }
 
 .extra-text6 {
-  color: white;
-  display: none;
-  text-transform: uppercase;
-  position: fixed;
-  top: 60%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
+  display: none; }
+
+body {
+  background-color: #ECF0F1; }
 
 .tableStyle {
   position: fixed;
@@ -400,8 +422,12 @@ a:hover .extra-text6 {
 
 .container {
   position: relative;
-  width: 80%;
-  height: 80%; }
+  width: 250px;
+  height: 80%;
+  text-align: center; }
+
+.container h1 {
+  margin-top: 50%; }
 
 .overlay {
   position: absolute;

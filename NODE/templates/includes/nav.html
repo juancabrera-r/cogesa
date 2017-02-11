@@ -1,8 +1,9 @@
 {% load static %}
+<!--
 <nav class="navbar navbar-default navbar-fixed-top bar fit">
   <div class="container ">
       <div class="navbar-header col-md-6 nav_img  hidden-xs">
-          <!--<img alt="logo" src="./static/img/dibujo.svg">-->
+          <!--<img alt="logo" src="./static/img/dibujo.svg">
       </div>
       <div class="col-md-6">
         <ul class="header header-link">
@@ -20,6 +21,14 @@
             </li>
         </ul>
       </div>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+    </div><!-- /.navbar-collapse
+  </div><!-- /.container-fluid
+</nav>-->
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="{% url 'index' %}">Inicio</a>
+  <a href="{% url 'services' %}">Servicios</a>
+  <a href="#">Equipo</a>
+  <a href="#">Trabajo</a>
+</div>

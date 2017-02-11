@@ -2,16 +2,16 @@
 
 //DATOS DE CONTACTO
 $footer-background-color: transparent;
-$footer-text-color: $white-blue;
-$font-footer-text: codepro;
+$footer-text-color: $blanco-roto;
+$font-footer-text: arial;
 $font-size-contact: 1em;
 $font-size-contact-small-screen: 0.8em;
 $font-size-contact-tablet: 0.6em;
 $font-size-contact-phone: 0.6em;
 
 //COPYRIGHT
-$background-copyright-color: black;
-$copyright-text-color: $white-blue;
+$background-copyright-color: rgba(0, 0, 0, 0.1);
+$copyright-text-color: $blanco-roto;
 $font-copyright: roboto;
 $font-copyright-size-text: 10px;
 $copyright-botom-color: $clear-red;
@@ -27,7 +27,6 @@ $copyright-text-color-hover: $dark-blue;
   height: 150px;
   width: 100%;
   z-index: 100;
-  font-family: $footer-font-family;
   background-color: $footer-background-color;
   text-align: center;
   color: $footer-text-color;
@@ -48,6 +47,9 @@ $copyright-text-color-hover: $dark-blue;
 }
 
 .footer p {
+  filter:alpha(opacity=60);
+  -moz-opacity: 0.60;
+  opacity: 0.60;
   padding: 0.5%;
   font-family: $font-footer-text;
   font-size: $font-size-contact;
@@ -77,8 +79,5 @@ $copyright-text-color-hover: $dark-blue;
 
 .footer-label a:hover{
   text-decoration: none;
-  color: $copyright-text-color-hover;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: $copyright-botom-color;
+  font-weight: bold;
 }

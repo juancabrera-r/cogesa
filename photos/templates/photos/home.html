@@ -1,8 +1,12 @@
 {% extends 'base.html' %}
 
 {% block body %}
+
 <div class="background-container">
         {% include "photos/includes/background.html" %}
         {% include "photos/includes/title.html" %}
 </div>
+    <div class="menu-button-white">
+      <i class="fa fa-bars burger" onclick="openNav()"></i>
+    </div>
 {% endblock %}

@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="stylesheet" href="{% static '/css/bootstrap.css' %}">
     <link rel="stylesheet" href="{% static '/scss/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 
@@ -16,20 +17,13 @@
 </head>
 <body>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-xs">
-                {%include "includes/nav.html" %}
-            </div>
-        </div>
-    </div>
-    <div>
-
-    </div>
+    {% include "includes/nav.html" %}
 
     {% block body %}
 
     {% endblock %}
+
+
 
     {% include "includes/footer.html" %}
 
@@ -37,5 +31,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="static/js/bootstrap.min.js"></script>
 <script src="static/js/background.js"></script>
+<script src="static/js/menu.js"></script>
 </body>
 </html>
